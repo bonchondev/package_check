@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  web:
+    image: package_checker:0.0.1
+    build: .
+    environment:
+      DATABASE_URL: "postgres://postgres:postgres@localhost/realworld"
+    tty: true
+    stdin_open: true
+    ports:
+      - '9000:9000'
